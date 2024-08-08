@@ -1,0 +1,552 @@
+{
+    "data": [
+      {
+        "ANTI-BIOTICS": [
+          {
+			"id": 1,
+            "name": "CEFUROMART-500",
+			"composition": "Cefuroxime Axtil -500MG",
+			"packsize": "10 x 6",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+          {
+			"id": 2,
+            "name": "ZIMART-250",
+			"composition": "Azithromycin 250MG",
+			"packsize": "10 x 6",
+			"form": "Tablets",
+			"pack": "Blister",
+            "image": ""
+          },
+		  {
+			"id": 3,
+            "name": "ZIMART-500",
+			"composition": "Azithromycin 500MG",
+			"packsize": "10 x 3",
+			"form": "Tablets",
+			"pack": "Blister",
+            "image": ""
+          },
+		  {
+			"id": 4,
+            "name": "FLOXOMART-200",
+			"composition": "Ofloxacin-200MG",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Blister",
+            "image": ""
+          },
+		  {
+			"id": 5,
+            "name": "FLOXOMART-OZ",
+			"composition": "Ofloxacin-200MG + Ornidazole-500MG",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 6,
+            "name": "MOXYMART-CV LB",
+			"composition": "Amoxycillin 500MG + Potassium Clavulanate 125MG with LB",
+			"packsize": "10 x 6",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 7,
+            "name": "CEFIMART-100 DT",
+			"composition": "CEFIXIME TRIHYDRATE I.P. 100MG DT",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 8,
+            "name": "CEFIMART-200 LB",
+			"composition": "CEFIXIME TRIHYDRATE I.P. 200MG + LB",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 9,
+            "name": "CEFIMART-O",
+			"composition": "CEFIXIME TRIHYDRATE I.P. 200MG + OFLOXACIN 200MG",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 10,
+            "name": "CEFPOMART-100 DT",
+			"composition": "CEFPODOXIME PROXETIL I.P. 100MG DT",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 11,
+            "name": "CEFPOMART-200",
+			"composition": "CEFPODOXIME PROXETIL I.P. 200MG",
+			"packsize": "10 x 10",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+          },
+		  {
+			"id": 12,
+            "name": "CEFPOMART-200 CV",
+			"composition": "CEFPODOXIME PROXETIL I.P. 200MG+ POTTASSIUM CLAVUNATE",
+			"packsize": "10 x 6",
+			"form": "Tablets",
+			"pack": "Alu-Alu",
+            "image": ""
+		  },
+		  {
+			"id": 13,
+            "name": "CEFTAMART-125",
+			"composition": "CEFTRIAXONE 125MG",
+			"packsize": "125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 14,
+            "name": "CEFTAMART-250",
+			"composition": "CEFTRIAXONE 250MG",
+			"packsize": "250 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 15,
+            "name": "CEFTAMART-500",
+			"composition": "CEFTRIAXONE 500MG",
+			"packsize": "500 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 16,
+            "name": "CEFTAMART-1GM",
+			"composition": "CEFTRIAXONE 1GM",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 17,
+            "name": "CEFTAMART-2GM",
+			"composition": "CEFTRIAXONE 2GM",
+			"packsize": "2 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 18,
+            "name": "CEFTAMART–S 1.5 GM",
+			"composition": "CEFTRIAXONE SULBACTAM 1.5GM",
+			"packsize": "1.5 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 19,
+            "name": "CEFTAMART–S 750",
+			"composition": "CEFTRIAXONE SULBACTAM 750MG",
+			"packsize": "750 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 20,
+            "name": "CEFTAMART–S 375",
+			"composition": "CEFTRIAXONE SULBACTAM 375MG",
+			"packsize": "375 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 21,
+            "name": "CEFTAMART–S 187.5",
+			"composition": "CEFTRIAXONE SULBACTAM 187.5MG",
+			"packsize": "187.5 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 22,
+            "name": "CEFTAMART-TZ 281.25",
+			"composition": "CEFTRIAXONE TAZOBACTAM 281.25MG",
+			"packsize": "281.25 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 23,
+            "name": "CEFTAMART-TZ 562.5",
+			"composition": "CEFTRIAXONE TAZOBACTAM 562.5MG",
+			"packsize": "562.5 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 24,
+            "name": "CEFTAMART-TZ 140.625",
+			"composition": "CEFTRIAXONE TAZOBACTAM 140.625MG",
+			"packsize": "40.625 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 25,
+            "name": "CEFTAMART-TZ 1125",
+			"composition": "CEFTRIAXONE TAZOBACTAM 1125MG",
+			"packsize": "1125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 26,
+            "name": "SEFOMART-250",
+			"composition": "CEFOPERAZONE 250MG",
+			"packsize": "250 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 27,
+            "name": "SEFOMART-1GM",
+			"composition": "CEFOPERAZONE 1GM",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 28,
+            "name": "SEFOMART-S 500",
+			"composition": "CEFOPERAZONE SULBACTAM 500MG",
+			"packsize": "500 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 29,
+            "name": "SEFOMART-S 1GM",
+			"composition": "CEFOPERAZONE SULBACTAM 1GM",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 30,
+            "name": "SEFOMART-S 1.5GM",
+			"composition": "CEFTRIAXONE SULBACTAM 1.5GM",
+			"packsize": "1.5 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 31,
+            "name": "SEFOMART-TZ 562.5",
+			"composition": "CEFOPERAZONE TAZOBACTAM 562.5MG",
+			"packsize": "562.5 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 32,
+            "name": "SEFOMART-TZ 1125",
+			"composition": "CEFOPERAZONE TAZOBACTAM 1125MG",
+			"packsize": "1125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 33,
+            "name": "CEFOMART 125",
+			"composition": "CEFOTAXIME 125MG",
+			"packsize": "125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 34,
+            "name": "CEFOMART 250",
+			"composition": "CEFOTAXIME 250MG",
+			"packsize": "250 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 35,
+            "name": "CEFOMART 500",
+			"composition": "CEFOTAXIME 500MG",
+			"packsize": "500 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 36,
+            "name": "CEFOMART 1GM",
+			"composition": "CEFOTAXIME 1GM",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 37,
+            "name": "CEFEMART 250",
+			"composition": "CEFEPIME 250MG",
+			"packsize": "250 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 38,
+            "name": "CEFEMART 500",
+			"composition": "CEFEPIME 500MG",
+			"packsize": "50 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 39,
+            "name": "CEFEMART 1GM",
+			"composition": "CEFEPIME 1GM",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 40,
+            "name": "CEFEMART-TZ 562.5",
+			"composition": "CEFEPIME TAZOBACTAM 562.5MG",
+			"packsize": "562.5 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 41,
+            "name": "CEFEMART-TZ 1125",
+			"composition": "CEFEPIME TAZOBACTAM 1125MG",
+			"packsize": "1125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 42,
+            "name": "TAZIMART 125",
+			"composition": "CEFTAZIDIME 125MG",
+			"packsize": "125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 43,
+            "name": "TAZIMART 250",
+			"composition": "CEFTAZIDIME 250MG",
+			"packsize": "250 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 44,
+            "name": "TAZIMART 500",
+			"composition": "CEFTAZIDIME 500MG",
+			"packsize": "500 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 45,
+            "name": "TAZIMART 1GM",
+			"composition": "CEFTAZIDIME 1GM",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 46,
+            "name": "TAZIMART-TZ 281.25",
+			"composition": "CEFTAZIDIME TAZOBACTAM 281.25MG",
+			"packsize": "281.25 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 47,
+            "name": "TAZIMART-TZ 281.25",
+			"composition": "CEFTAZIDIME TAZOBACTAM 562.5MG",
+			"packsize": "1 GM",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  },
+		  {
+			"id": 48,
+            "name": "TAZIMART-TZ 1125",
+			"composition": "CEFTAZIDIME 1125MG",
+			"packsize": "1125 MG",
+			"form": "INJ.",
+			"pack": "VIAL",
+            "image": ""
+		  }
+        ]
+      },
+      {
+        "ORAL-LIQUID": [
+          {
+			"id": 49,
+            "name": "FERRIMART",
+			"composition": "IRON, VITAMIN B12 AND FOLIC ACID SYUP",
+			"packsize": "300 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 50,
+            "name": "CALOMART D3",
+			"composition": "CALCIUM, VITAMIN D3 AND VITAMIN B12 SUSPENSION",
+			"packsize": "200 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 51,
+            "name": "MARTZYME",
+			"composition": "ALPHA AMYLASE AND PAPAIN SYRUP",
+			"packsize": "200 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 52,
+            "name": "MULTIMART",
+			"composition": "VITAMIN B6 NICOTINAMIDE VITAMIN B12 & LYSINE SYRUP",
+			"packsize": "200 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 53,
+            "name": "CYPROMART- T",
+			"composition": "CYPROHEPTADINE TRICHOLINE CITRATE & SORBITOL ORAL SOLUTION",
+			"packsize": "200 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 54,
+            "name": "PARAMART",
+			"composition": "PARACETAMOL SYRUP",
+			"packsize": "60 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 55,
+            "name": "PARAMART-CP",
+			"composition": "PARACETAMOL,CPM & PHENYLEPHRINE HCL",
+			"packsize": "100 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 56,
+            "name": "COFMART-CD",
+			"composition": "CHLORPHENIRAMINE MELATE IP & CODEINE PHOSPHATE",
+			"packsize": "100 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 57,
+            "name": "COFMART-DX",
+			"composition": "AMBROXOL 15MG+TERBUTALINE 1.25MG+GUIAPHENSIN 50MG+MENTHOL 1MG",
+			"packsize": "100 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 58,
+            "name": "COFMART- T",
+			"composition": "CHLORPHENIRAMINE MELATE IP & DEXTROMETHROPHAN IP",
+			"packsize": "60 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 59,
+            "name": "FLOXOMART-M",
+			"composition": "OFLOXACIN 50MG + METRONIDAZOLE 100MG",
+			"packsize": "100 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          },
+		  {
+			"id": 60,
+            "name": "MAROKAST",
+			"composition": "MONTELUKAST 4MG + LEVOCETRIZINE 2.5MG",
+			"packsize": "100 ml",
+			"form": "SYP.",
+			"pack": "CTN",
+            "image": ""
+          }
+        ]
+      }
+    ]
+  }
