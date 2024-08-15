@@ -1,0 +1,6 @@
+{
+    "basePath" : "/",
+    "homeScreenPath" : "/home",
+    "aboutUsScreenPath" : "/aboutus",
+    "productsScreenPath" : "/products"
+}

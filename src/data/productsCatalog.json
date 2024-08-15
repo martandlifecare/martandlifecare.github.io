@@ -1,0 +1,46 @@
+{
+    "allopathic" : [
+        {
+            "name" : "Test 1",
+            "composition" : "Test composition 1",
+            "pack" : "10 x 10",
+            "image" : "/test1.jpg",
+            "category" : {
+                "dosage" : "Tablets",
+                "therpatic" : "Critical Care Range"
+            }
+        },
+        {
+            "name" : "Test 2",
+            "composition" : "Test composition 2",
+            "pack" : "10 x 10",
+            "image" : "/test2.jpg",
+            "category" : {
+                "dosage" : "Syrup",
+                "therpatic" : "Antibiotic"
+            }
+        }
+    ],
+    "herbal" : [
+        {
+            "name" : "Test 3",
+            "composition" : "Test composition 3",
+            "pack" : "14 x 14",
+            "image" : "/test1.jpg",
+            "category" : {
+                "dosage" : "Injections",
+                "therpatic" : "Anti Cough Range"
+            }
+        },
+        {
+            "name" : "Test 4",
+            "composition" : "Test composition 4",
+            "pack" : "10 x 10",
+            "image" : "/test2.jpg",
+            "category" : {
+                "dosage" : "Suspensions",
+                "therpatic" : "Antibiotic"
+            }
+        }
+    ]
+}
