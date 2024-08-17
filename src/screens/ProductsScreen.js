@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductsCatalogScreen from '../components/productsScreen/ProductsCatalogScreen';
+import ProductsCatalog from '../components/productsScreen/ProductsCatalog';
 
 export default class ProductsScreen extends Component {
 
@@ -7,7 +7,7 @@ export default class ProductsScreen extends Component {
 
     return (
       <div className='app-base-font-family mt-8 pt-4'>
-        <ProductsCatalogScreen />
+        <ProductsCatalog />
       </div>
     );
   }
