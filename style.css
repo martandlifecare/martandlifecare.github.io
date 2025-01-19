@@ -1093,7 +1093,8 @@ ul.tabs-nav .tab-nav.active {
     margin-bottom: 64px;
     font-size: 48px;
     font-weight: 600;
-    color: #fff
+    color: #fff;
+    text-align: center;
 }
 
 .faq-stuff .accordion-wrap .entry-content p {
