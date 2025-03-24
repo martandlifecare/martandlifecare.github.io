@@ -3,6 +3,7 @@ import WhatWeOffer from '../components/homeScreen/WhatWeOffer';
 import WhoWeAre from '../components/homeScreen/WhoWeAre';
 import WhatWeHave from '../components/homeScreen/WhatWeHave';
 import WhatOurClients from '../components/homeScreen/WhatOurClients';
+import GetInTouch from '../components/homeScreen/GetInTouch';
 
 export default class HomeScreen extends Component {
 
@@ -14,6 +15,7 @@ export default class HomeScreen extends Component {
         <WhoWeAre />
         <WhatWeHave />
         <WhatOurClients />
+        <GetInTouch />
       </div>
     );
   }

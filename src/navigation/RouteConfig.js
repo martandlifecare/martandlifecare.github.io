@@ -4,6 +4,7 @@ import HomeScreen from "../screens/HomeScreen";
 import ProductsScreen from "../screens/ProductsScreen";
 import Navbar from "./Navbar";
 import AboutUsScreen from "../screens/AboutUsScreen";
+import Footer from "../components/common/Footer";
 
 /* Function to load components based on routing */
 export default function RouteConfig() {
@@ -18,6 +19,7 @@ export default function RouteConfig() {
         <Route path={routeConstants.productsScreenPath} element={<ProductsScreen />} />
         <Route path="*" element={<Navigate to={routeConstants.homeScreenPath} />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

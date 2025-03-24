@@ -89,3 +89,18 @@ export const lifeCareProductsWhatWeHaveDetails = [
     "I am consistently satisfied with both the high quality of the medication I receive and the seamless efficiency of the logistics involved in its delivery. This reliable combination provides significant peace of mind regarding my ongoing treatment.",
     "The entire process, from the ordering of my prescription to its timely and secure arrival, has been consistently positive. The dedication to maintaining high standards in both product quality and logistical execution is truly commendable."
   ]
+
+  export const contactDetaisFooter = [
+    {
+      name : "Address:",
+      value : "A;12 F,1ST Floor, Above SBI, Big B Complex, Baddi, 173205"
+    },
+    {
+      name : "Phone:",
+      value : "+91 84060 11111"
+    },
+    {
+      name : "Email:",
+      value : "martandlifecare@gmail.com"
+    }
+  ];
