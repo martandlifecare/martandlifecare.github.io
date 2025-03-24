@@ -78,3 +78,14 @@ export const lifeCareProductsWhatWeHaveDetails = [
       "content": "Comprehensive range of services across the drug lifecycle from drug discovery & development to commercialmanufacturing of drug products."
     }
   ];
+
+  export const clientFeedbacks = [
+    "The quality of the medication I received continues to be excellent, consistently providing the intended therapeutic benefits and contributing positively to my health management. I appreciate the reliable efficacy and the consistent physical attributes of each dose.",
+    "I have full confidence in the quality of the medicines dispensed; the clear labeling, secure packaging, and the overall appearance of the product instill a strong sense of trust in its integrity and safety for consumption.",
+    "The comprehensive information provided with the medication, detailing usage and precautions, is very helpful and reflects a commitment to ensuring patients are well-informed about their treatment. This level of detail adds to my positive perception of the product's quality.",
+    "The delivery of my prescription was exceptionally prompt and arrived well within the expected timeframe, ensuring I had timely access to my necessary medication without any disruption. The efficiency of the delivery service is truly appreciated.",
+    "I was very impressed with the packaging of my recent order; it was robust and carefully designed to protect the medication during transit, ensuring it arrived in perfect condition without any signs of damage or mishandling.",
+    "The communication regarding my order and its delivery status was excellent, with timely updates provided at each stage. The transparency and proactive information made the entire process smooth and hassle-free.",
+    "I am consistently satisfied with both the high quality of the medication I receive and the seamless efficiency of the logistics involved in its delivery. This reliable combination provides significant peace of mind regarding my ongoing treatment.",
+    "The entire process, from the ordering of my prescription to its timely and secure arrival, has been consistently positive. The dedication to maintaining high standards in both product quality and logistical execution is truly commendable."
+  ]
