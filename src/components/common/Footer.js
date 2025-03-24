@@ -21,10 +21,10 @@ export default class Footer extends Component {
                         <div className=''>
                             <img alt='Logo' className='cursor-pointer h-5rem' src={logo} />
                         </div>
-                        <div className='font-medium line-height-4 pl-3 pr-8 text-gray-500'>
+                        <div className='font-medium line-height-4 pl-3 pr-8 text-gray-500 text-sm'>
                             MARTAND LIFE CARE PVT. LTD. has been developing and implementing innovative solutions to the industries since its foundation, we deal in multiple sectors of pharma as well as nutraceuticals industries like CMO/QMS/TURNKEY PROJECT/HRM.
                         </div>
-                        <div className='pl-3 text-gray-500 font-medium'>
+                        <div className='pl-3 text-gray-500 font-medium text-sm'>
                             Copyright © {new Date().getFullYear()} All rights reserved
                         </div>
                     </div>
