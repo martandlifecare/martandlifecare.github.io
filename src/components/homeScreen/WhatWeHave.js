@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'primereact/button';
 import { Fieldset } from 'primereact/fieldset';
-import { lifeCareProductsWhatWeHaveDetails, pharmatechWhatWeHaveDetails } from '../../data/constants';
 import backgroundImage from '../../assets/homeScreen/what-we-offer-bg.jpg';
-import image from '../../assets/homeScreen/whatWeHaveImages/drug.png';
+import { lifeCareProductsWhatWeHaveDetails, pharmatechWhatWeHaveDetails } from '../../data/constants';
 
 export default class WhatWeHave extends Component {
 
@@ -67,8 +66,7 @@ export default class WhatWeHave extends Component {
                                                 <div className='mr-3'>
                                                     <img
                                                         alt={item.heading}
-                                                        // src={`../../assets/homeScreen/whatWeHaveImages/${item.imageName}`}
-                                                        src={image}
+                                                        src={`/assets/homeScreen/whatWeHaveImages/${item.imageName}`}
                                                     />
                                                 </div>
                                                 <div className='font-medium text-white-alpha-80'>
@@ -95,8 +93,7 @@ export default class WhatWeHave extends Component {
                                                 <div className='mr-3'>
                                                     <img
                                                         alt={item.heading}
-                                                        // src={`../../assets/homeScreen/whatWeHaveImages/${item.imageName}`}
-                                                        src={image}
+                                                        src={`/assets/homeScreen/whatWeHaveImages/${item.imageName}`}
                                                     />
                                                 </div>
                                                 <div className='font-medium text-white-alpha-80'>

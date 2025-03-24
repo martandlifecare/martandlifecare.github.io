@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import { Button } from 'primereact/button';
+import { useNavigate } from 'react-router-dom';
+import routeConstants from '../../navigation/RouteConstants.json';
 import whoWeAreImage from '../../assets/homeScreen/who-we-are.jpg';
 
-export default class WhoWeAre extends Component {
+// Custom HOC to provide navigate prop
+const withNavigate = (WrappedComponent) => (props) => {
+    const navigate = useNavigate();
+    return <WrappedComponent {...props} navigate={navigate} />;
+};
+
+class WhoWeAre extends Component {
+    handleReadMoreClick = () => {
+        this.props.navigate(routeConstants.aboutUsScreenPath);
+    };
 
     render() {
-
         const foundingYear = 1983;
         const currentYear = new Date().getFullYear();
         const yearsSinceFounding = currentYear - foundingYear;
@@ -22,10 +32,13 @@ export default class WhoWeAre extends Component {
                             Our company Martand Life Care came in existence in year 2008 and ever since we are striving for upcoming challenges, applications and requirements from markets. Our company takes utmost pride in providing them the best possible solution and service.
                         </div>
                         <div>
-                            <Button label="Read More"
+                            <Button
+                                label="Read More"
                                 className='app-background-linear border-none border-round-3xl font-semibold line-height-3 px-6 py-2 text-white-alpha-90'
                                 icon="pi pi-arrow-right"
-                                iconPos='right' />
+                                iconPos='right'
+                                onClick={this.handleReadMoreClick}
+                            />
                         </div>
                     </div>
                     <div className=''>
@@ -36,3 +49,5 @@ export default class WhoWeAre extends Component {
         );
     }
 }
+
+export default withNavigate(WhoWeAre);
