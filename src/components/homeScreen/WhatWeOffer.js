@@ -20,10 +20,11 @@ export default class WhatWeOffer extends Component {
                 </div>
                 <div className='flex flex-wrap gap-4 justify-content-around mt-6 mx-8'>
                     {
-                        whatWeOfferPoints.map(item => {
+                        whatWeOfferPoints.map((item,index) => {
                             return (
                                 <div className='app-background-linear font-semibold px-5 py-3 text-lg text-white'
-                                    style={{minWidth : "24rem"}}>
+                                    style={{minWidth : "24rem"}}
+                                    key={index}>
                                     {item}
                                 </div>)
                         })

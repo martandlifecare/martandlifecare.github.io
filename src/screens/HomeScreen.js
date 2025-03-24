@@ -4,6 +4,7 @@ import WhoWeAre from '../components/homeScreen/WhoWeAre';
 import WhatWeHave from '../components/homeScreen/WhatWeHave';
 import WhatOurClients from '../components/homeScreen/WhatOurClients';
 import GetInTouch from '../components/homeScreen/GetInTouch';
+import Banner from '../components/homeScreen/Banner';
 
 export default class HomeScreen extends Component {
 
@@ -11,6 +12,7 @@ export default class HomeScreen extends Component {
 
     return (
       <div className=''>
+        <Banner />
         <WhatWeOffer />
         <WhoWeAre />
         <WhatWeHave />

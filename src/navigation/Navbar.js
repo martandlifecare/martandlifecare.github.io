@@ -19,27 +19,17 @@ const Navbar = () => {
   return (
     <>
       {
-        // <div className="align-items-center fixed flex justify-content-between py-3 top-0 w-full z-5 px-8">
-        <div className="align-items-center flex justify-content-between py-3 top-0 w-full z-5 px-8">
+        <div className="align-items-center fixed flex justify-content-between py-3 top-0 w-full z-5 px-8 mx-7">
           <div className=''>
             <img alt='Logo' className='cursor-pointer h-5rem' src={logo} onClick={() => navigate(routeConstants.homeScreenPath)} />
           </div>
-          <div className='align-items-center flex gap-5 justify-content-center'>
+          <div className='align-items-center flex flex-grow-1 gap-5 pl-6'>
             <div className=''>
               <Button
                 label="Home"
                 onClick={() => navigate(routeConstants.homeScreenPath)}
                 text
                 className={isHomePage ? activeNavButtonClassName : normalNavButtonClassName}
-                style={{ transition: 'all 0.2s ease-in-out' }}
-              />
-            </div>
-            <div className=''>
-              <Button
-                label="About Us"
-                onClick={() => navigate(routeConstants.aboutUsScreenPath)}
-                text
-                className={isAboutUsPage ? activeNavButtonClassName : normalNavButtonClassName}
                 style={{ transition: 'all 0.2s ease-in-out' }}
               />
             </div>
@@ -52,9 +42,18 @@ const Navbar = () => {
                 style={{ transition: 'all 0.2s ease-in-out' }}
               />
             </div>
+            <div className=''>
+              <Button
+                label="About Us"
+                onClick={() => navigate(routeConstants.aboutUsScreenPath)}
+                text
+                className={isAboutUsPage ? activeNavButtonClassName : normalNavButtonClassName}
+                style={{ transition: 'all 0.2s ease-in-out' }}
+              />
+            </div>
           </div>
           <div className='flex flex-2 justify-content-end pr-8'>
-            <Button label="+91 84060 11111" text icon="pi pi-phone" className='app-background-linear border-round-3xl font-semibold p-button p-button-text p-component px-4 py-3 text-lg text-white-alpha-90 border-none'/>
+            <Button label="+91 84060 11111" text icon="pi pi-phone" className='app-background-linear border-round-3xl font-semibold p-button p-button-text p-component px-4 py-3 text-lg text-white-alpha-90 border-none' />
           </div>
         </div>
       }

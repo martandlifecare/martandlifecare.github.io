@@ -104,3 +104,36 @@ export const lifeCareProductsWhatWeHaveDetails = [
       value : "martandlifecare@gmail.com"
     }
   ];
+
+  export const homeScreenBannerDetails = [
+    {
+      "imageName": "martandlife-7.jpg",
+      "heading": "Allopathic",
+      "content": "Fundamental components of both modern and traditional medicine are safe, effective, and of good quality. They are prescribed and used rationally."
+    },
+    {
+      "imageName": "martandlife-12.jpg",
+      "heading": "Nutraceuticals",
+      "content": "Food or fortified food products that not only supplements the diet but also assists in treating or preventing disease (apart from anaemia), so provides medical benefits."
+    },
+    {
+      "imageName": "martandlife-9.jpg",
+      "heading": "Herbal",
+      "content": "Derived from plants. Plants have been the basis for medical treatments through much of human history, and such traditional medicine is still widely practiced today."
+    },
+    {
+      "imageName": "martandlife-11.jpg",
+      "heading": "Veterinary",
+      "content": "Veterinary medicine is the branch of medicine that deals with the prevention, control, diagnosis and treatment of disease, disorder and injury in animals."
+    },
+    {
+      "imageName": "martandlife-8.jpg",
+      "heading": "Cosmetics",
+      "content": "Products to enhance the appearance of the face, fragrance or the texture of the body. Many cosmetics are designed for use of applying to the face and body."
+    },
+    {
+      "imageName": "martandlife-10.jpg",
+      "heading": "Active Pharmaceutical Ingredients",
+      "content": "Abbreviated as API, it is the part of any drug that produces the intended effects. These are the ingredients that are biologically active in any pharmaceutical drug."
+    }
+  ];

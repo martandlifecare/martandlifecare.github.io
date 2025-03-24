@@ -22,7 +22,10 @@ export default class WhoWeAre extends Component {
                             Our company Martand Life Care came in existence in year 2008 and ever since we are striving for upcoming challenges, applications and requirements from markets. Our company takes utmost pride in providing them the best possible solution and service.
                         </div>
                         <div>
-                            <Button label="Read More" className='app-background-linear border-round-3xl font-semibold p-button p-button-text p-component px-4 py-3 text-lg text-white-alpha-90 border-none' />
+                            <Button label="Read More"
+                                className='app-background-linear border-none border-round-3xl font-semibold line-height-3 px-6 py-2 text-white-alpha-90'
+                                icon="pi pi-arrow-right"
+                                iconPos='right' />
                         </div>
                     </div>
                     <div className=''>

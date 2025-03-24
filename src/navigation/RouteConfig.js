@@ -10,7 +10,6 @@ import Footer from "../components/common/Footer";
 export default function RouteConfig() {
   return (
     <Router>
-      {/* <Navbar /> */}
       <Navbar />
       <Routes>
         <Route exact path={routeConstants.basePath} element={<Navigate to={routeConstants.homeScreenPath} />} />
