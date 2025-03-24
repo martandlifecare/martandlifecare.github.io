@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { Button } from 'primereact/button';
-import { whatWeOfferPoints } from '../../data/constants';
+import { Fieldset } from 'primereact/fieldset';
+import { lifeCareProductsWhatWeHaveDetails, pharmatechWhatWeHaveDetails } from '../../data/constants';
 import backgroundImage from '../../assets/homeScreen/what-we-offer-bg.jpg';
+import image from '../../assets/homeScreen/whatWeHaveImages/drug.png';
 
 export default class WhatWeHave extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            lifeCareProductsActive : true,
-            pharmatechActive : false
+            lifeCareProductsActive: true,
+            pharmatechActive: false
         }
     }
 
@@ -30,15 +32,84 @@ export default class WhatWeHave extends Component {
                 <div className='flex justify-content-center text-6xl text-white'>
                     What We Have
                 </div>
-                <div className='flex mt-8 mx-6 gap-4'>
+                <div className='flex gap-4 mt-8 mx-8 px-8'>
                     <div className=''>
-                        <Button label="Life Care Products" className={this.state.lifeCareProductsActive ? activeButtonClassName : inactiveButtonClassName } />
+                        <Button label="Life Care Products" className={this.state.lifeCareProductsActive ? activeButtonClassName : inactiveButtonClassName}
+                            onClick={(e) => {
+                                this.setState({
+                                    lifeCareProductsActive: true,
+                                    pharmatechActive: false
+                                })
+                            }} />
                     </div>
                     <div className=''>
-                        <Button label="Pharmatech" className={this.state.pharmatechActive ? activeButtonClassName : inactiveButtonClassName } />
+                        <Button label="Pharmatech" className={this.state.pharmatechActive ? activeButtonClassName : inactiveButtonClassName}
+                            onClick={(e) => {
+                                this.setState({
+                                    lifeCareProductsActive: false,
+                                    pharmatechActive: true
+                                })
+                            }} />
                     </div>
                 </div>
-                
+                <div className='mt-6 mx-7 px-8'>
+                    {
+                        this.state.lifeCareProductsActive ?
+                            <div className='flex flex-wrap gap-4 md:flex-row justify-content-between'>
+                                {lifeCareProductsWhatWeHaveDetails.map(item => {
+                                    return (
+                                        <Fieldset
+                                            legend={item.heading}
+                                            className='bg-transparent border-2 border-round-3xl line-height-4 md:w-30rem w-full'
+                                            key={item.heading}
+                                        >
+                                            <div className='flex align-items-center'>
+                                                <div className='mr-3'>
+                                                    <img
+                                                        alt={item.heading}
+                                                        // src={`../../assets/homeScreen/whatWeHaveImages/${item.imageName}`}
+                                                        src={image}
+                                                    />
+                                                </div>
+                                                <div className='font-medium text-white-alpha-80'>
+                                                    {item.content}
+                                                </div>
+                                            </div>
+                                        </Fieldset>
+                                    )
+                                })}
+                            </div>
+                            : null
+                    }
+                    {
+                        this.state.pharmatechActive ?
+                            <div className='flex flex-wrap gap-4 md:flex-row justify-content-between'>
+                                {pharmatechWhatWeHaveDetails.map(item => {
+                                    return (
+                                        <Fieldset
+                                            legend={item.heading}
+                                            className='bg-transparent border-2 border-round-3xl line-height-4 md:w-30rem w-full'
+                                            key={item.heading}
+                                        >
+                                            <div className='flex align-items-center'>
+                                                <div className='mr-3'>
+                                                    <img
+                                                        alt={item.heading}
+                                                        // src={`../../assets/homeScreen/whatWeHaveImages/${item.imageName}`}
+                                                        src={image}
+                                                    />
+                                                </div>
+                                                <div className='font-medium text-white-alpha-80'>
+                                                    {item.content}
+                                                </div>
+                                            </div>
+                                        </Fieldset>
+                                    )
+                                })}
+                            </div>
+                            : null
+                    }
+                </div>
             </div>
         );
     }
