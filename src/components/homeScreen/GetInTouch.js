@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
-import backgroundImage from '../../assets/homeScreen/reach-us.jpg';
+import backgroundImage from '../../assets/reach-us.jpg';
 
 export default class GetInTouch extends Component {
 

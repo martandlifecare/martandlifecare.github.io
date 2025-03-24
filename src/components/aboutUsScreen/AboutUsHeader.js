@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import backgroundImageBanner from '../../assets/aboutUsScreen/banner.png';
 
 export default class AboutUsHeader extends Component {
     render() {
         return (
-            <div 
-                className='app-base-font-family' 
+            <div
+                className='app-base-font-family px-8'
                 style={{
-                    backgroundImage: `url(${backgroundImageBanner})`, 
-                    backgroundSize: 'cover', 
-                    backgroundPosition: 'center', 
-                    height: '100vh',  // Set height if needed
-                    width: '100%',  // Set width if needed
-                }}
-            >
-                {/* Content goes here */}
+                    backgroundImage: `url('assets/homeScreen/bannerImages/martandlife-12.jpg')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '65vh'
+                }}>
+                <div className='flex flex-column gap-2 p-8 w-6 mt-8'>
+                    <div className='font-medium text-7xl text-gray-700 mt-6'>
+                        About us
+                    </div>
+                    <div className='font-medium line-height-4 pl-1 text-gray-500'>
+                        Home / <span className='text-blue-400'>About Us</span>
+                    </div>
+                </div>
             </div>
         );
     }

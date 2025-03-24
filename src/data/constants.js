@@ -137,3 +137,22 @@ export const lifeCareProductsWhatWeHaveDetails = [
       "content": "Abbreviated as API, it is the part of any drug that produces the intended effects. These are the ingredients that are biologically active in any pharmaceutical drug."
     }
   ];
+
+  export const aboutUsStripDetails = [
+    {
+      "name": "Quality Products",
+      "imageName": "icon-quality.png"
+    },
+    {
+      "name": "Customer Satisfaction",
+      "imageName": "icon-satisfaction.png"
+    },
+    {
+      "name": "On-time Delivery",
+      "imageName": "icon-delivery.png"
+    },
+    {
+      "name": "Innovative Approach",
+      "imageName": "icon-idea.png"
+    }
+  ]

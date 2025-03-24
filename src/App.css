@@ -17,3 +17,13 @@
     background: -ms-linear-gradient(180deg, rgba(50, 200, 250, 1) 0%, rgba(88, 125, 228, 1) 100%);
     background: linear-gradient(270deg, rgba(50, 200, 250, 1) 0%, rgba(88, 125, 228, 1) 100%);
 }
+
+.about-us-card-deck-gradient{
+  background: -moz-linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(50, 200, 250, 1)), color-stop(100%, rgb(88, 137, 212)));
+  background: -webkit-linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
+  background: -o-linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
+  background: -ms-linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
+  background: linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#18a3eb', endColorstr='#587de4', GradientType=1);
+}
