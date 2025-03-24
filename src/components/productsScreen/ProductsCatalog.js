@@ -148,11 +148,11 @@ export default class ProductsCatalog extends Component {
 
     render() {
         return (
-            <div className='px-8 app-base-font-family mx-3'>
+            <div className='app-base-font-family mt-6 mx-8 px-8'>
                 <div className='flex flex-column gap-6'>
                     <div className='flex flex-column gap-4 mt-4'>
-                        <div className='border-bottom-3 border-green-500 border-none pb-2 text-5xl text-800 w-fit'>Our Products</div>
-                        <div className='text-800 text-xl'>Our company is offering the wide range of the pharma products with the best quality.</div>
+                        <div className='font-medium text-6xl text-gray-700'>Our Products</div>
+                        <div className='font-medium line-height-4 text-gray-600 pl-1'>Our company is offering the wide range of the pharma products with the best quality.</div>
                     </div>
                     <TabMenu
                         model={this.getTabItems()}
