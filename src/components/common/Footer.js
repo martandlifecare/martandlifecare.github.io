@@ -35,7 +35,7 @@ export default class Footer extends Component {
                                 contactDetaisFooter.map(item => {
                                     return (<div className='flex'>
                                         <div className='font-semibold text-gray-600 w-4rem mr-4'>{item.name}</div>
-                                        <div className='font-medium line-height-3 text-gray-500'>{item.value}</div>
+                                        <div className='font-medium line-height-3 text-gray-500 text-sm'>{item.value}</div>
                                     </div>)
                                 })
                             }
