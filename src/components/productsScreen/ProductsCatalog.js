@@ -49,7 +49,7 @@ export default class ProductsCatalog extends Component {
                     src={imagePath}
                     className='h-8rem w-8rem app-products-header-image'
                 />
-                <span className='font-medium text-800 text-lg'>{item.label}</span>
+                <span className='font-medium text-800 md:text-lg'>{item.label}</span>
             </div>
         );
     };
@@ -148,10 +148,10 @@ export default class ProductsCatalog extends Component {
 
     render() {
         return (
-            <div className='app-base-font-family mt-6 mx-8 px-8'>
-                <div className='flex flex-column gap-6'>
+            <div className='app-base-font-family md:mt-6 mt-3 mx-8 px-8'>
+                <div className='flex flex-column md:gap-6 gap-3'>
                     <div className='flex flex-column gap-4 mt-4'>
-                        <div className='font-medium text-6xl text-gray-700'>Our Products</div>
+                        <div className='font-medium text-3xl md:text-6xl text-gray-700'>Our Products</div>
                         <div className='font-medium line-height-4 text-gray-600 pl-1'>Our company is offering the wide range of the pharma products with the best quality.</div>
                     </div>
                     <TabMenu

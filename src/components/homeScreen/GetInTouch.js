@@ -41,16 +41,16 @@ export default class GetInTouch extends Component {
         };
 
         return (
-            <div className='align-items-center app-base-font-family flex flex-column gap-5 px-8 py-5' style={backgroundStyle}>
-                <div className='flex justify-content-center text-5xl text-white'>
+            <div className='align-items-center app-base-font-family flex flex-column gap-3 md:gap-5 md:px-8 py-3 md:py-5' style={backgroundStyle}>
+                <div className='flex justify-content-center text-3xl md:text-5xl text-white'>
                     Get in touch with us
                 </div>
                 <div className=''>
-                    <InputText value={this.state.query} onChange={(e) => this.setState({ query: e.target.value })} className='w-30rem text-xs' 
+                    <InputText value={this.state.query} onChange={(e) => this.setState({ query: e.target.value })} className='md:w-30rem w-22rem text-xs' 
                         placeholder='Write your query and please mention your email/contact number.'/>
                 </div>
                 <div className=''>
-                    <Button label="Submit" className='app-background-linear border-round-3xl font-semibold px-8 py-3 text-base text-white-alpha-90 border-none'
+                    <Button label="Submit" className='app-background-linear border-round-3xl font-semibold px-4 md:px-8 md:py-3 text-sm md:text-base text-white-alpha-90 border-none'
                         onClick={(e) => this.sendEmail()} />
                 </div>
             </div>

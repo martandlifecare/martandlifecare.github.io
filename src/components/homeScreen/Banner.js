@@ -2,11 +2,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import React, { Component } from 'react';
 import { Button } from 'primereact/button';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { homeScreenBannerDetails } from '../../data/constants';
 import routeConstants from '../../navigation/RouteConstants.json';
-import { useNavigate } from 'react-router-dom';
 
 // Custom HOC to provide navigate prop
 const withNavigate = (WrappedComponent) => (props) => {
@@ -28,6 +28,7 @@ class Banner extends Component {
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
+
                     }}
                     pagination={{
                         clickable: true,
@@ -39,21 +40,21 @@ class Banner extends Component {
                                 style={{
                                     backgroundImage: `url('assets/homeScreen/bannerImages/${slide.imageName}')`,
                                     backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
+                                    // backgroundPosition: 'center',
                                 }}
-                                className='p-8 h-screen'
+                                className='md:p-8 md:h-screen h-30rem md:bg-center'
                             >
-                                <div className='flex flex-column gap-6 p-8 w-6 mt-8'>
-                                    <div className='font-medium text-7xl text-gray-700'>
+                                <div className='flex flex-column md:gap-6 gap-5 p-4 pt-8 md:p-8 md:w-6'>
+                                    <div className='font-medium text-3xl md:text-7xl text-gray-700 mt-8'>
                                         {slide.heading}
                                     </div>
-                                    <div className='font-medium line-height-4 text-gray-700 text-lg'>
+                                    <div className='font-medium line-height-4 text-gray-700 text-base md:text-lg'>
                                         {slide.content}
                                     </div>
                                     <div className=''>
                                         <Button
                                             label="Read More"
-                                            className='app-background-linear border-none border-round-3xl font-semibold line-height-3 px-6 py-2 text-white-alpha-90'
+                                            className='app-background-linear border-none border-round-3xl font-semibold md:line-height-3 md:px-6 md:py-2 text-white-alpha-90'
                                             icon="pi pi-arrow-right"
                                             iconPos='right'
                                             onClick={this.handleReadMoreClick}

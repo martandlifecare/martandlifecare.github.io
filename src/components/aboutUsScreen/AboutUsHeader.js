@@ -12,7 +12,7 @@ export default class AboutUsHeader extends Component {
                     height: '65vh'
                 }}>
                 <div className='flex flex-column gap-2 p-8 w-6 mt-8'>
-                    <div className='font-medium text-7xl text-gray-700 mt-6'>
+                    <div className='font-medium text-7xl text-gray-700 md:mt-6 mt-3'>
                         About us
                     </div>
                     <div className='font-medium line-height-4 pl-1 text-gray-500'>

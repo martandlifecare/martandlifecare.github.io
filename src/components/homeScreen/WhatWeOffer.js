@@ -14,15 +14,15 @@ export default class WhatWeOffer extends Component {
         };
 
         return (
-            <div className='app-base-font-family px-8 py-8' style={backgroundStyle}>
-                <div className='flex justify-content-center text-6xl text-white'>
+            <div className='app-base-font-family md:px-8 md:py-8 py-6' style={backgroundStyle}>
+                <div className='flex justify-content-center text-3xl md:text-6xl text-white'>
                     What We Offer
                 </div>
-                <div className='flex flex-wrap gap-4 justify-content-around mt-6 mx-8'>
+                <div className='flex flex-wrap gap-4 justify-content-around mt-6 mt-3 md:mx-8'>
                     {
                         whatWeOfferPoints.map((item,index) => {
                             return (
-                                <div className='app-background-linear font-semibold px-5 py-3 text-lg text-white'
+                                <div className='app-background-linear font-semibold md:px-5 px-3 md:py-3 py-2 smd:text-lg text-white'
                                     style={{minWidth : "24rem"}}
                                     key={index}>
                                     {item}

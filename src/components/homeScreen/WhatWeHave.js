@@ -23,15 +23,15 @@ export default class WhatWeHave extends Component {
             // You can add other background styles here, like backgroundPosition
         };
 
-        const activeButtonClassName = "app-background-linear font-semibold px-4 py-3 text-lg text-white-alpha-90 border-none";
-        const inactiveButtonClassName = "bg-white-alpha-30 font-semibold px-4 py-3 text-lg text-white-alpha-90 border-none";
+        const activeButtonClassName = "app-background-linear font-semibold md:px-4 md:py-3 text-base md:text-lg text-white-alpha-90 border-none";
+        const inactiveButtonClassName = "bg-white-alpha-30 font-semibold md:px-4 md:py-3 text-base md:text-lg text-white-alpha-90 border-none";
 
         return (
-            <div className='app-base-font-family px-8 py-8' style={backgroundStyle}>
-                <div className='flex justify-content-center text-6xl text-white'>
+            <div className='app-base-font-family md:px-8 px-2 md:py-8 py-4' style={backgroundStyle}>
+                <div className='flex justify-content-center text-3xl md:text-6xl text-white'>
                     What We Have
                 </div>
-                <div className='flex gap-4 mt-8 mx-8 px-8'>
+                <div className='flex gap-4 justify-content-center md:mt-8 md:mx-8 md:px-8 mt-6'>
                     <div className=''>
                         <Button label="Life Care Products" className={this.state.lifeCareProductsActive ? activeButtonClassName : inactiveButtonClassName}
                             onClick={(e) => {
@@ -51,7 +51,7 @@ export default class WhatWeHave extends Component {
                             }} />
                     </div>
                 </div>
-                <div className='mt-6 mx-7 px-8'>
+                <div className='mt-6 md:mx-7 md:px-8 px-4'>
                     {
                         this.state.lifeCareProductsActive ?
                             <div className='flex flex-wrap gap-4 md:flex-row justify-content-between'>
@@ -69,7 +69,7 @@ export default class WhatWeHave extends Component {
                                                         src={`/assets/homeScreen/whatWeHaveImages/${item.imageName}`}
                                                     />
                                                 </div>
-                                                <div className='font-medium text-white-alpha-80'>
+                                                <div className='font-medium md:text-base text-sm text-white-alpha-80'>
                                                     {item.content}
                                                 </div>
                                             </div>
@@ -96,7 +96,7 @@ export default class WhatWeHave extends Component {
                                                         src={`/assets/homeScreen/whatWeHaveImages/${item.imageName}`}
                                                     />
                                                 </div>
-                                                <div className='font-medium text-white-alpha-80'>
+                                                <div className='font-medium md:text-base text-sm text-white-alpha-80'>
                                                     {item.content}
                                                 </div>
                                             </div>

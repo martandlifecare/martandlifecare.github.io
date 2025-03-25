@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.webp';
 import { Button } from 'primereact/button';
+import { MegaMenu } from 'primereact/megamenu';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import routeConstants from '../navigation/RouteConstants.json';
-import logo from '../assets/logo.webp';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -37,10 +38,25 @@ const Navbar = () => {
     isScrolled ? 'bg-white' : ''
   }`;
 
-  const logoClassName = `cursor-pointer transition-all duration-300 ease-in-out ${isScrolled ? 'h-4rem' : 'h-5rem'}`;
+  const logoClassName = `cursor-pointer transition-all duration-300 ease-in-out ${isScrolled ? 'h-3rem md:h-4rem' : 'h-4rem md:h-5rem'}`;
   const numberButtonClassName = `app-background-linear border-round-3xl font-semibold px-4 py-3 text-white-alpha-90 border-none transition-all duration-300 ease-in-out ${
-    isScrolled ? 'text-sm' : 'text-lg'
+    isScrolled ? 'text-sm' : 'md:text-lg'
   }`;
+
+  const items = [
+    {
+        label: 'Home',
+        command: () => {navigate(routeConstants.homeScreenPath)}
+    },
+    {
+      label: 'Products',
+      command: () => {navigate(routeConstants.productsScreenPath)}
+  },
+  {
+    label: 'About Us',
+    command: () => {navigate(routeConstants.aboutUsScreenPath)}
+},
+  ]
 
   return (
     <>
@@ -49,7 +65,7 @@ const Navbar = () => {
           <div className='pl-7'>
             <img alt='Logo' className={logoClassName} src={logo} onClick={() => navigate(routeConstants.homeScreenPath)} />
           </div>
-          <div className='align-items-center flex flex-grow-1 gap-5 pl-6'>
+          <div className='align-items-center hidden md:flex md:flex-grow-1 gap-5 pl-6'>
             <div className=''>
               <Button
                 label="Home"
@@ -78,8 +94,11 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <div className='flex flex-2 justify-content-end pr-8'>
+          <div className='hidden md:flex md:flex-2 justify-content-end pr-8'>
             <Button label="+91 84060 11111" text icon="pi pi-phone" className={numberButtonClassName} />
+          </div>
+          <div className='md:hidden block'>
+            <MegaMenu model={items} breakpoint="960px" className='bg-transparent border-none w-8rem'/>
           </div>
         </div>
       }

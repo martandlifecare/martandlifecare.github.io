@@ -8,9 +8,9 @@ export default class AboutMLC extends Component {
         return (
             <div className='app-base-font-family mx-7 p-8'>
 
-                <div className='align-items-center flex gap-8'>
+                <div className='align-items-center flex md:gap-8 gap-4'>
                     <div className=''>
-                        <div className='font-medium text-6xl text-gray-700'>About MLC</div>
+                        <div className='font-medium text-3xl md:text-6xl text-gray-700'>About MLC</div>
                         <div className='font-medium line-height-4 text-gray-600'>
                             <p>
                                 Martand Life Care is India’s one of the latest and fastest-growing
@@ -39,12 +39,12 @@ export default class AboutMLC extends Component {
                     </div>
                 </div>
 
-                <div className='align-items-center flex gap-8'>
+                <div className='align-items-center flex md:gap-8 gap-4'>
                     <div className=''>
                         <img src={missionImage} alt="Mission" className='h-30rem' />
                     </div>
                     <div className=''>
-                        <div className='font-medium text-6xl text-gray-700'>Mission</div>
+                        <div className='font-medium text-3xl md:text-6xl text-gray-700'>Mission</div>
                         <div className='font-medium line-height-4 text-gray-600'>
                             <p>
                                 Our mission is to improve the quality of life of our people. We will
@@ -62,9 +62,9 @@ export default class AboutMLC extends Component {
                     </div>
                 </div>
 
-                <div className='align-items-center flex gap-8'>
+                <div className='align-items-center flex md:gap-8 gap-4'>
                     <div className=''>
-                        <div className='font-medium text-6xl text-gray-700'>Vision</div>
+                        <div className='font-medium text-3xl md:text-6xl text-gray-700'>Vision</div>
                         <div className='font-medium line-height-4 text-gray-600'>
                             <p>
                                 Martand has been working for the life care segment for the past 3
