@@ -13,6 +13,7 @@ const withNavigate = (WrappedComponent) => (props) => {
 class WhoWeAre extends Component {
     handleReadMoreClick = () => {
         this.props.navigate(routeConstants.aboutUsScreenPath);
+        window.scrollTo(0, 0);
     };
 
     render() {

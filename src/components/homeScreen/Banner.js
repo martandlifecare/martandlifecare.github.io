@@ -17,6 +17,7 @@ const withNavigate = (WrappedComponent) => (props) => {
 class Banner extends Component {
     handleReadMoreClick = () => {
         this.props.navigate(routeConstants.productsScreenPath);
+        window.scrollTo(0, 0);
     };
 
     render() {

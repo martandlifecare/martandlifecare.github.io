@@ -139,7 +139,7 @@ export default class ProductsCatalog extends Component {
                     <div className='flex justify-content-end'>
                         <Tag severity="success" value={item.pack}></Tag>
                     </div>
-                    <div className='flex flex-column h-12rem justify-content-center md:gap-4'>
+                    <div className='flex flex-column md:h-12rem justify-content-center md:gap-4'>
                         <div className=' border-round-2xl overflow-hidden'>
                             <Image
                                 src={process.env.PUBLIC_URL + '/assets/productsScreen/productImages/' + item.image}

@@ -43,19 +43,23 @@ const Navbar = () => {
     isScrolled ? 'text-sm' : 'md:text-lg'
   }`;
 
+  const scrollToTop = () =>{
+    window.scrollTo(0, 0);
+  }
+
   const items = [
     {
-        label: 'Home',
-        command: () => {navigate(routeConstants.homeScreenPath)}
+      label: 'Home',
+      command: () => { navigate(routeConstants.homeScreenPath); scrollToTop(); }
     },
     {
       label: 'Products',
-      command: () => {navigate(routeConstants.productsScreenPath)}
-  },
-  {
-    label: 'About Us',
-    command: () => {navigate(routeConstants.aboutUsScreenPath)}
-},
+      command: () => { navigate(routeConstants.productsScreenPath); scrollToTop(); }
+    },
+    {
+      label: 'About Us',
+      command: () => { navigate(routeConstants.aboutUsScreenPath); scrollToTop(); }
+    },
   ]
 
   return (
