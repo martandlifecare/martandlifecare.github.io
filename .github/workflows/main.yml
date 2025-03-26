@@ -31,7 +31,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git remote set-url origin https://git:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://git:${{ secrets.CUSTOM_GITHUB_TOKEN }}@github.com/${{ github.repository }}
           npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
