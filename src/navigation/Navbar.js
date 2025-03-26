@@ -66,11 +66,13 @@ const Navbar = () => {
     <>
       {
         <div className={navbarClassName}>
-          <div className='md:hidden block'>
-            <MegaMenu model={items} breakpoint="960px" className='bg-transparent border-none w-8rem'/>
+          <div className='md:hidden block flex-1 md:flex-grow-0'>
+            <MegaMenu model={items} breakpoint="960px" className='bg-transparent border-none'/>
           </div>
-          <div className='md:pl-7 pl-1'>
+          <div className='md:pl-7 flex-1 md:flex-grow-0'>
             <img alt='Logo' className={logoClassName} src={logo} onClick={() => navigate(routeConstants.homeScreenPath)} />
+          </div>
+          <div className='md:hidden block flex-1 md:flex-grow-0'>
           </div>
           <div className='align-items-center hidden md:flex md:flex-grow-1 gap-5 pl-6'>
             <div className=''>

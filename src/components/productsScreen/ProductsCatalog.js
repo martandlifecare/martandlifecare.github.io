@@ -191,7 +191,7 @@ export default class ProductsCatalog extends Component {
                             })}
                             <TieredMenu model={this.state.filterMenuItems} popup ref={this.menu} breakpoint="767px" />
                             <Button label="Add Filter" severity="secondary" outlined icon="pi pi-plus" rounded onClick={(e) => this.menu.current.toggle(e)} 
-                                className='text-sm md:text-base mt-2 md:mt-0'/>
+                                className='text-sm md:text-base'/>
                         </div>
                         <div className="flex gap-4 mt-2 md:mt-4 mb-4 md:mb-8 md:flex-row flex-column">
                             {this.renderTabContent()}
