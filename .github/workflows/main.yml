@@ -29,9 +29,6 @@ jobs:
       - name: Build React App
         run: npm run build # Changed from predeploy to build
 
-      - name: Create CNAME file
-        run: echo 'martandlifecare.com' > ./build/CNAME
-
       - name: Deploy to GitHub Pages
         run: |
           git remote set-url origin https://git:${{ secrets.CUSTOM_GITHUB_TOKEN }}@github.com/${{ github.repository }}
