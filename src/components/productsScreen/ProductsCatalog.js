@@ -59,41 +59,36 @@ export default class ProductsCatalog extends Component {
         const tabs = Object.keys(productsCatalog);
         const category = tabs[activeIndex];
         const items = productsCatalog[category].items;
-
+    
         const groupedItems = {};
-
-        // Dynamically group items by each key in the 'category' object
+    
         items.forEach(item => {
             const categoryKeys = Object.keys(item.category);
-
-            /* Iterating through each key in category of an item */
+    
             categoryKeys.forEach(key => {
                 const categorykeyValue = item.category[key];
-
-                /* Creating for the category key if not already present in variable groupedItems */
+    
                 if (!groupedItems[key]) {
-                    groupedItems[key] = [];
+                    groupedItems[key] = new Set(); // Use a Set for unique values within each key
                 }
-
-                groupedItems[key].push({
-                    label: categorykeyValue,
-                    command: () => {
-                        const updatedFilterCategories = [...this.state.filterCategories, categorykeyValue]
-                        this.setState({ filterCategories: updatedFilterCategories })
-                        this.filterItems(updatedFilterCategories, this.state.activeIndex);
-                    },
-                    ...item
-                });
+                groupedItems[key].add(categorykeyValue);
             });
         });
-
-        // Construct the result array for only two levels
+    
         const result = Object.keys(groupedItems).map(key => ({
-            label: `By ${key.charAt(0).toUpperCase() + key.slice(1)}`, // Capitalize the first letter of the key
-            items: groupedItems[key]
+            label: `By ${key.charAt(0).toUpperCase() + key.slice(1)}`,
+            items: Array.from(groupedItems[key]).map(value => ({
+                label: value,
+                command: () => {
+                    const updatedFilterCategories = [...this.state.filterCategories, value];
+                    this.setState({ filterCategories: updatedFilterCategories }, () => {
+                        this.filterItems(updatedFilterCategories, this.state.activeIndex);
+                    });
+                }
+            }))
         }));
-
-        this.setState({ filterMenuItems: result })
+    
+        this.setState({ filterMenuItems: result });
     }
 
     // Method to filter items based on filterCategories
@@ -124,14 +119,28 @@ export default class ProductsCatalog extends Component {
     // Method to render tab content
     renderTabContent = () => {
         const { filteredItems } = this.state; // Use filteredItems from state
-        return filteredItems.map((item, index) => (
+    
+        // Sort the filteredItems array by name
+        const sortedItems = [...filteredItems].sort((a, b) => {
+            const nameA = a.name.toLowerCase();
+            const nameB = b.name.toLowerCase();
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+    
+        return sortedItems.map((item, index) => (
             <Card key={index} className="border-round-2xl shadow-2 md:w-16rem w-full">
                 <div className='flex flex-column gap-2 md:gap-4'>
                     <div className='flex justify-content-end'>
                         <Tag severity="success" value={item.pack}></Tag>
                     </div>
-                    <div className='flex flex-column md:gap-4'>
-                        <div className='h-9rem bg-gray-800 border-round-2xl overflow-hidden'>
+                    <div className='flex flex-column h-12rem justify-content-center md:gap-4'>
+                        <div className=' border-round-2xl overflow-hidden'>
                             <Image
                                 src={process.env.PUBLIC_URL + '/assets/productsScreen/productImages/' + item.image}
                                 alt={item.name || 'Product Image'}
@@ -142,18 +151,18 @@ export default class ProductsCatalog extends Component {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-column gap-2 text-center'>
-                        <div className='text-base md:text-2xl text-800 font-semibold'>{item.name}</div>
-                        <div className='text-xs md:text-base text-500 font-semibold'>{item.composition}</div>
-                        <div className='flex flex-column gap-2 mt-2 md:mt-4 text-600 text-xs md:text-base'>
-                            <div className='align-self-center border-1 border-300 border-round-2xl px-3 py-1'><i className="mr-1 pi pi-tag text-xs"></i> {item.category.dosage}</div>
-                            <div className='align-self-center border-1 border-300 border-round-2xl px-3 py-1'><i className="mr-1 pi pi-tag text-xs"></i> {item.category.therpatic}</div>
+                    <div className='flex flex-column md:gap-2 text-center'>
+                        <div className='text-base md:text-xl text-800 font-semibold md:h-3rem h-2rem mt-2 md:mt-0'>{item.name}</div>
+                        <div className='text-xs text-500 font-medium md:h-3rem h-2rem'>{item.composition}</div>
+                        <div className='flex flex-column gap-2 text-600 mt-2 text-xs md:text-sm'>
+                            <div className='align-self-center border-1 border-300 border-round-2xl px-3 py-1 w-full'><i className="mr-1 pi pi-tag text-xs"></i> {item.category.dosage}</div>
+                            <div className='align-self-center border-1 border-300 border-round-2xl px-3 py-1 w-full'><i className="mr-1 pi pi-tag text-xs"></i> {item.category.therpatic}</div>
                         </div>
                     </div>
                 </div>
             </Card>
         ));
-    };
+    }
 
     render() {
         return (

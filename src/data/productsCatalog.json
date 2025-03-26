@@ -3,48 +3,118 @@
         "image": "allopathic.png",
         "items": [
             {
-                "name": "Test 1",
-                "composition": "Test composition 1",
-                "pack": "10 x 10",
-                "image": "/test1.jpg",
+                "name": "Martzyme 200ml",
+                "composition": "Alpha Amylase and Papain Syrup ",
+                "pack": "200ml",
+                "image": "/Martzyme.jpeg",
                 "category": {
-                    "dosage": "Tablets",
-                    "therpatic": "Critical Care Range"
+                    "dosage": "Syrup",
+                    "therpatic": "Gastro"
                 }
             },
             {
-                "name": "Test 2",
-                "composition": "Test composition 2",
-                "pack": "10 x 10",
-                "image": "/test2.jpg",
+                "name": "Ferrimart 300ml",
+                "composition": "Iron, Vitamin B12 & Folic Acid Syrup",
+                "pack": "300ml",
+                "image": "/Ferrimart.jpeg",
                 "category": {
                     "dosage": "Syrup",
-                    "therpatic": "Antibiotic"
+                    "therpatic": "Haematitic"
+                }
+            },
+            {
+                "name": "Multimart 200ml",
+                "composition": "Vitamin B6 Nicotinamide, Vitamin B12 & Lysin Syrup",
+                "pack": "200ml",
+                "image": "/Multimart.jpeg",
+                "category": {
+                    "dosage": "Syrup",
+                    "therpatic": "Nutritional Supplements"
+                }
+            },
+            {
+                "name": "Calomart 200ml",
+                "composition": "Calcium, Vitamin D3, Vitamin B12 Suspension",
+                "pack": "200ml",
+                "image": "/Calomart.jpeg",
+                "category": {
+                    "dosage": "Syrup",
+                    "therpatic": "Nutritional Supplements"
+                }
+            },
+            {
+                "name": "Ceftamart-S 1.5gm",
+                "composition": "Ceftriaxone 1000mg & Sulbactam 500mg Injection",
+                "pack": "1x1.5gm",
+                "image": "/Ceftamart.jpeg",
+                "category": {
+                    "dosage": "Injectables",
+                    "therpatic": "Antibiotics"
                 }
             }
         ]
     },
-    "herbal": {
+    "ayurvedic": {
         "image": "herbal.png",
         "items": [
             {
-                "name": "Test 3",
-                "composition": "Test composition 3",
-                "pack": "14 x 14",
-                "image": "/test1.jpg",
+                "name": "Lassietone 200ml",
+                "composition": "The Female Wellness Syrup",
+                "pack": "200ml",
+                "image": "/Lassietone.jpeg",
                 "category": {
-                    "dosage": "Herb Injections",
-                    "therpatic": "Herb Anti Cough Range"
+                    "dosage": "Syrup",
+                    "therpatic": "Female Care"
                 }
             },
             {
-                "name": "Test 4",
-                "composition": "Test composition 4",
-                "pack": "10 x 10",
-                "image": "/test2.jpg",
+                "name": "Lassietone Plus 200ml",
+                "composition": "The Female Wellness Syrup",
+                "pack": "200ml",
+                "image": "/Lassietone-Plus.jpeg",
                 "category": {
-                    "dosage": "Herb Suspensions",
-                    "therpatic": "Herb Antibiotic"
+                    "dosage": "Syrup",
+                    "therpatic": "Female Care"
+                }
+            },
+            {
+                "name": "Cofmart 100ml",
+                "composition": "Cough Syrup",
+                "pack": "100ml",
+                "image": "/Cofmart.jpeg",
+                "category": {
+                    "dosage": "Syrup",
+                    "therpatic": "Cough care"
+                }
+            },
+            {
+                "name": "Cofmart SF 100ml",
+                "composition": "Sugar free Cough Syrup",
+                "pack": "100ml",
+                "image": "/Cofmart-SF.jpeg",
+                "category": {
+                    "dosage": "Syrup",
+                    "therpatic": "Cough care"
+                }
+            },
+            {
+                "name": "Cirrhoep 60 Capsules",
+                "composition": "Liver Care",
+                "pack": "60 Capsules",
+                "image": "/Cirrhoep.jpeg",
+                "category": {
+                    "dosage": "Capsules",
+                    "therpatic": "Liver care"
+                }
+            },
+            {
+                "name": "Fleximart 50ml",
+                "composition": "Pain relief oil",
+                "pack": "50ml",
+                "image": "/Fleximart.jpeg",
+                "category": {
+                    "dosage": "Oil",
+                    "therpatic": "Pain oil"
                 }
             }
         ]
