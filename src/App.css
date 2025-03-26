@@ -5,6 +5,9 @@
 .app-products-header-image{
   border-radius: 50%; 
   border: 2px solid white; 
+}
+
+.app-products-header-image-active{
   box-shadow: rgba(0, 128, 0, 0.58) 0px 0px 0px 4px;
 }
 
@@ -26,4 +29,14 @@
   background: -ms-linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
   background: linear-gradient(360deg, rgb(43, 178, 223) 0%, rgb(88, 137, 212) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#18a3eb', endColorstr='#587de4', GradientType=1);
+}
+
+.about-us-header, .products-header{
+  height: 65vh
+}
+
+@media (max-width: 767px) {
+  .about-us-header, .products-header{
+    height: 32vh
+  }
 }

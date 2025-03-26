@@ -34,11 +34,11 @@ const Navbar = () => {
     };
   }, []);
 
-  const navbarClassName = `align-items-center fixed flex justify-content-between py-3 top-0 w-full z-5 px-8 transition-all duration-300 ease-in-out ${
+  const navbarClassName = `align-items-center fixed flex md:justify-content-between py-3 top-0 w-full z-5 md:px-8 transition-all duration-300 ease-in-out ${
     isScrolled ? 'bg-white' : ''
   }`;
 
-  const logoClassName = `cursor-pointer transition-all duration-300 ease-in-out ${isScrolled ? 'h-3rem md:h-4rem' : 'h-4rem md:h-5rem'}`;
+  const logoClassName = `cursor-pointer transition-all duration-300 ease-in-out ${isScrolled ? 'h-4rem' : 'h-4rem md:h-5rem'}`;
   const numberButtonClassName = `app-background-linear border-round-3xl font-semibold px-4 py-3 text-white-alpha-90 border-none transition-all duration-300 ease-in-out ${
     isScrolled ? 'text-sm' : 'md:text-lg'
   }`;
@@ -62,7 +62,10 @@ const Navbar = () => {
     <>
       {
         <div className={navbarClassName}>
-          <div className='pl-7'>
+          <div className='md:hidden block'>
+            <MegaMenu model={items} breakpoint="960px" className='bg-transparent border-none w-8rem'/>
+          </div>
+          <div className='md:pl-7 pl-1'>
             <img alt='Logo' className={logoClassName} src={logo} onClick={() => navigate(routeConstants.homeScreenPath)} />
           </div>
           <div className='align-items-center hidden md:flex md:flex-grow-1 gap-5 pl-6'>
@@ -96,9 +99,6 @@ const Navbar = () => {
           </div>
           <div className='hidden md:flex md:flex-2 justify-content-end pr-8'>
             <Button label="+91 84060 11111" text icon="pi pi-phone" className={numberButtonClassName} />
-          </div>
-          <div className='md:hidden block'>
-            <MegaMenu model={items} breakpoint="960px" className='bg-transparent border-none w-8rem'/>
           </div>
         </div>
       }

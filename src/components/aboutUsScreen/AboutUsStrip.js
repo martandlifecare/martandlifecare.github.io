@@ -16,10 +16,10 @@ export default class AboutUsStrip extends Component {
                                     <img
                                         src={`assets/aboutUsScreen/aboutUsStrip/${card.imageName}`}
                                         alt={card.name}
-                                        className='h-4rem'
+                                        className='h-2rem md:h-4rem'
                                     />
                                 </div>
-                                <div className="font-medium text-white">{card.name}</div>
+                                <div className="font-medium text-white text-sm md:text-base">{card.name}</div>
                             </div>
                         </div>
                     ))}

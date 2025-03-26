@@ -1,11 +1,12 @@
-import React, { Component, createRef } from 'react';
-import { TabMenu } from 'primereact/tabmenu';
-import { Card } from 'primereact/card';
 import { Tag } from 'primereact/tag';
-import productsCatalog from '../../data/productsCatalog.json';
+import { Card } from 'primereact/card';
 import { Chip } from 'primereact/chip';
+import { Image } from 'primereact/image';
 import { Button } from 'primereact/button';
+import { TabMenu } from 'primereact/tabmenu';
 import { TieredMenu } from 'primereact/tieredmenu';
+import React, { Component, createRef } from 'react';
+import productsCatalog from '../../data/productsCatalog.json';
 
 export default class ProductsCatalog extends Component {
     constructor(props) {
@@ -40,16 +41,16 @@ export default class ProductsCatalog extends Component {
     // Method to render tab header template
     renderTabTemplate = (item, options, index, tab) => {
         const categoryImage = productsCatalog[tab]?.image || ''; // Get the image path from productsCatalog
-        const imagePath = `${process.env.PUBLIC_URL}/productCategoryImages/${categoryImage}`;
+        const imagePath = `${process.env.PUBLIC_URL}/assets/productsScreen/productCategoryImages/${categoryImage}`;
 
         return (
-            <div className="align-items-center flex flex-column gap-4 p-4" onClick={options.onClick} style={{ cursor: 'pointer' }} key={index}>
+            <div className="align-items-center flex flex-column gap-4 p-4 " onClick={options.onClick} style={{ cursor: 'pointer' }} key={index}>
                 <img
                     alt={item.label}
                     src={imagePath}
-                    className='h-8rem w-8rem app-products-header-image'
+                    className={`h-5rem md:h-8rem app-products-header-image transition-all transition-duration-300 ${this.state.activeIndex === index ? 'app-products-header-image-active' : ''}`}
                 />
-                <span className='font-medium text-800 md:text-lg'>{item.label}</span>
+                <span className={`font-medium text-800 md:text-lg transition-all transition-duration-300 pb-2 ${this.state.activeIndex === index ? 'border-bottom-3 border-green-500' : ''}`}>{item.label}</span>
             </div>
         );
     };
@@ -124,19 +125,27 @@ export default class ProductsCatalog extends Component {
     renderTabContent = () => {
         const { filteredItems } = this.state; // Use filteredItems from state
         return filteredItems.map((item, index) => (
-            <Card key={index} className="border-round-2xl p-card p-component shadow-2 w-16rem">
-                <div className='flex flex-column gap-4'>
+            <Card key={index} className="border-round-2xl shadow-2 md:w-16rem w-full">
+                <div className='flex flex-column gap-2 md:gap-4'>
                     <div className='flex justify-content-end'>
                         <Tag severity="success" value={item.pack}></Tag>
                     </div>
-                    <div className='flex flex-column gap-4'>
-                        <div className='h-9rem bg-gray-800 border-round-2xl'
-                            style={{ backgroundImage: `url(${process.env.PUBLIC_URL + 'productImages/' + item.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                    <div className='flex flex-column md:gap-4'>
+                        <div className='h-9rem bg-gray-800 border-round-2xl overflow-hidden'>
+                            <Image
+                                src={process.env.PUBLIC_URL + '/assets/productsScreen/productImages/' + item.image}
+                                alt={item.name || 'Product Image'}
+                                width="100%"
+                                height="100%"
+                                style={{ objectFit: 'cover' }}
+                                preview
+                            />
+                        </div>
                     </div>
                     <div className='flex flex-column gap-2 text-center'>
-                        <div className='text-2xl text-800 font-semibold'>{item.name}</div>
-                        <div className='text-500 font-semibold'>{item.composition}</div>
-                        <div className='flex flex-column gap-2 mt-4 text-600'>
+                        <div className='text-base md:text-2xl text-800 font-semibold'>{item.name}</div>
+                        <div className='text-xs md:text-base text-500 font-semibold'>{item.composition}</div>
+                        <div className='flex flex-column gap-2 mt-2 md:mt-4 text-600 text-xs md:text-base'>
                             <div className='align-self-center border-1 border-300 border-round-2xl px-3 py-1'><i className="mr-1 pi pi-tag text-xs"></i> {item.category.dosage}</div>
                             <div className='align-self-center border-1 border-300 border-round-2xl px-3 py-1'><i className="mr-1 pi pi-tag text-xs"></i> {item.category.therpatic}</div>
                         </div>
@@ -148,30 +157,34 @@ export default class ProductsCatalog extends Component {
 
     render() {
         return (
-            <div className='app-base-font-family md:mt-6 mt-3 mx-8 px-8'>
+            <div className='app-base-font-family md:mt-6 mt-3 md:mx-8 px-4 md:px-8'>
                 <div className='flex flex-column md:gap-6 gap-3'>
-                    <div className='flex flex-column gap-4 mt-4'>
+                    <div className='flex flex-column gap-2 md:gap-4 mt-4'>
                         <div className='font-medium text-3xl md:text-6xl text-gray-700'>Our Products</div>
-                        <div className='font-medium line-height-4 text-gray-600 pl-1'>Our company is offering the wide range of the pharma products with the best quality.</div>
+                        <div className='font-medium line-height-4 text-gray-600 md:pl-1 md:text-base text-sm'>Our company is offering the wide range of the pharma products with the best quality.</div>
                     </div>
                     <TabMenu
                         model={this.getTabItems()}
                         activeIndex={this.state.activeIndex}
-                        className='align-self-center px-8'
+                        className='align-self-center md:px-8'
                     />
                     <div className='flex flex-column gap-4'>
-                        <div className='flex gap-4'>
-                            {this.state.filterCategories.map(category => {
-                                return (<Chip label={category} removable onRemove={() => {
-                                    const updatedFilterCategories = this.state.filterCategories.filter(item => item !== category)
-                                    this.setState({ filterCategories: updatedFilterCategories })
-                                    this.filterItems(updatedFilterCategories, this.state.activeIndex);
-                                }} />)
+                        <div className='flex flex-wrap gap-2 justify-content-center md:gap-4 md:justify-content-start md:px-0 px-1'>
+                            {this.state.filterCategories.map( (category,index) => {
+                                return (<Chip label={category} removable
+                                    key={index}
+                                    className='w-fit text-sm md:text-base'
+                                    onRemove={() => {
+                                        const updatedFilterCategories = this.state.filterCategories.filter(item => item !== category)
+                                        this.setState({ filterCategories: updatedFilterCategories })
+                                        this.filterItems(updatedFilterCategories, this.state.activeIndex);
+                                    }} />)
                             })}
                             <TieredMenu model={this.state.filterMenuItems} popup ref={this.menu} breakpoint="767px" />
-                            <Button label="Add Filter" severity="secondary" outlined icon="pi pi-plus" rounded onClick={(e) => this.menu.current.toggle(e)} />
+                            <Button label="Add Filter" severity="secondary" outlined icon="pi pi-plus" rounded onClick={(e) => this.menu.current.toggle(e)} 
+                                className='text-sm md:text-base mt-2 md:mt-0'/>
                         </div>
-                        <div className="flex gap-4 mt-4 mb-8">
+                        <div className="flex gap-4 mt-2 md:mt-4 mb-4 md:mb-8 md:flex-row flex-column">
                             {this.renderTabContent()}
                         </div>
                     </div>

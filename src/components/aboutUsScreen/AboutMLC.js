@@ -6,12 +6,12 @@ import visionImage from '../../assets/aboutUsScreen/vision.jpg';
 export default class AboutMLC extends Component {
     render() {
         return (
-            <div className='app-base-font-family mx-7 p-8'>
+            <div className='app-base-font-family md:mx-7 md:p-8 p-4'>
 
-                <div className='align-items-center flex md:gap-8 gap-4'>
+                <div className='align-items-center flex md:flex-row flex-column md:gap-8 gap-2'>
                     <div className=''>
                         <div className='font-medium text-3xl md:text-6xl text-gray-700'>About MLC</div>
-                        <div className='font-medium line-height-4 text-gray-600'>
+                        <div className='font-medium line-height-4 text-gray-600 md:text-base text-sm'>
                             <p>
                                 Martand Life Care is India’s one of the latest and fastest-growing
                                 companies. We are committed to working collaboratively with our
@@ -35,17 +35,17 @@ export default class AboutMLC extends Component {
                         </div>
                     </div>
                     <div className=''>
-                        <img src={aboutUsImage} alt="About us" className='h-30rem' />
+                        <img src={aboutUsImage} alt="About us" className='md:h-30rem h-20rem' />
                     </div>
                 </div>
 
-                <div className='align-items-center flex md:gap-8 gap-4'>
+                <div className='align-items-center flex md:flex-row flex-column md:gap-8 gap-2 flex-column-reverse'>
                     <div className=''>
-                        <img src={missionImage} alt="Mission" className='h-30rem' />
+                        <img src={missionImage} alt="Mission" className='md:h-22rem h-16rem' />
                     </div>
                     <div className=''>
                         <div className='font-medium text-3xl md:text-6xl text-gray-700'>Mission</div>
-                        <div className='font-medium line-height-4 text-gray-600'>
+                        <div className='font-medium line-height-4 text-gray-600 md:text-base text-sm'>
                             <p>
                                 Our mission is to improve the quality of life of our people. We will
                                 be one strong team united by our mission and values in our restless
@@ -62,10 +62,10 @@ export default class AboutMLC extends Component {
                     </div>
                 </div>
 
-                <div className='align-items-center flex md:gap-8 gap-4'>
+                <div className='align-items-center flex md:flex-row flex-column md:gap-8 gap-2'>
                     <div className=''>
                         <div className='font-medium text-3xl md:text-6xl text-gray-700'>Vision</div>
-                        <div className='font-medium line-height-4 text-gray-600'>
+                        <div className='font-medium line-height-4 text-gray-600 md:text-base text-sm'>
                             <p>
                                 Martand has been working for the life care segment for the past 3
                                 decades but has risen to a wider scope with today’s vision. The company
@@ -78,7 +78,7 @@ export default class AboutMLC extends Component {
                         </div>
                     </div>
                     <div className=''>
-                        <img src={visionImage} alt="Vision" className='h-30rem' />
+                        <img src={visionImage} alt="Vision" className='md:h-22rem h-14rem' />
                     </div>
                 </div>
 

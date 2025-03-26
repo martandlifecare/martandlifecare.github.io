@@ -4,15 +4,13 @@ export default class ProductsHeader extends Component {
     render() {
         return (
             <div
-                className='app-base-font-family px-8'
+                className='app-base-font-family px-8 md:bg-center products-header'
                 style={{
                     backgroundImage: `url('assets/homeScreen/bannerImages/martandlife-7.jpg')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '65vh'
+                    backgroundSize: 'cover'
                 }}>
-                <div className='flex flex-column gap-2 p-8 w-6 mt-8'>
-                    <div className='font-medium text-7xl text-gray-700 md:mt-6 mt-3'>
+                <div className='flex flex-column gap-2 md:p-8 md:w-6 mt-8 align-items-center md:align-items-start'>
+                    <div className='font-medium text-3xl md:text-7xl text-gray-700 mt-6'>
                         Products
                     </div>
                     <div className='font-medium line-height-4 pl-1 text-gray-500'>
