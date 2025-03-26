@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: 'latest' # Or specify your desired Node.js version
 
+      - name: Configure git profile
+        run: git config --global user.email "martandlifecare@gmail.com"
+             git config --global user.name "MLC"
+
+        
+
       - name: Install dependencies
         run: npm install
 
