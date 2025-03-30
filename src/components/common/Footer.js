@@ -9,8 +9,7 @@ export default class Footer extends Component {
 
         const backgroundStyle = {
             backgroundImage: `url(${backgroundImage})`,
-            //backgroundSize: 'cover', // Adjust as needed (e.g., 'contain', 'auto')
-            backgroundRepeat: 'no-repeat', // Adjust as needed (e.g., 'repeat', 'repeat-x', 'repeat-y')
+            backgroundRepeat: 'no-repeat',
         };
 
         return (

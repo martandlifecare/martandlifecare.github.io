@@ -11,7 +11,7 @@ import productsCatalog from '../../data/productsCatalog.json';
 export default class ProductsCatalog extends Component {
     constructor(props) {
         super(props);
-        this.menu = createRef(); // Creating a reference for the TieredMenu component
+        this.menu = createRef();
         this.state = {
             activeIndex: 0,
             filterCategories: [],
@@ -25,7 +25,6 @@ export default class ProductsCatalog extends Component {
         this.filterItems(this.state.filterCategories, this.state.activeIndex);
     }
 
-    // Method to generate tab items with custom header templates
     getTabItems = () => {
         return Object.keys(productsCatalog).map((tab, index) => ({
             label: tab.charAt(0).toUpperCase() + tab.slice(1),
@@ -38,9 +37,8 @@ export default class ProductsCatalog extends Component {
         }));
     };
 
-    // Method to render tab header template
     renderTabTemplate = (item, options, index, tab) => {
-        const categoryImage = productsCatalog[tab]?.image || ''; // Get the image path from productsCatalog
+        const categoryImage = productsCatalog[tab]?.image || '';
         const imagePath = `${process.env.PUBLIC_URL}/assets/productsScreen/productCategoryImages/${categoryImage}`;
 
         return (
@@ -69,7 +67,7 @@ export default class ProductsCatalog extends Component {
                 const categorykeyValue = item.category[key];
     
                 if (!groupedItems[key]) {
-                    groupedItems[key] = new Set(); // Use a Set for unique values within each key
+                    groupedItems[key] = new Set();
                 }
                 groupedItems[key].add(categorykeyValue);
             });

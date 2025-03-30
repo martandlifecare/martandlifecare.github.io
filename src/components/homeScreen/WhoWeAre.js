@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import routeConstants from '../../navigation/RouteConstants.json';
 import whoWeAreImage from '../../assets/homeScreen/who-we-are.jpg';
 
-// Custom HOC to provide navigate prop
 const withNavigate = (WrappedComponent) => (props) => {
     const navigate = useNavigate();
     return <WrappedComponent {...props} navigate={navigate} />;

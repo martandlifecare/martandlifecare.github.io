@@ -14,13 +14,12 @@ export default class GetInTouch extends Component {
 
     sendEmail = () => {
         const recipient = 'martandlifecare@gmail.com';
-        const subject = `Query from website - ${new Date().toLocaleDateString('en-GB').split('/').join('-')}`; // Format as DD-MM-YYYY
+        const subject = `Query from website - ${new Date().toLocaleDateString('en-GB').split('/').join('-')}`;
         const query = this.state.query;
-        const body = encodeURIComponent(`Hi,\n\nBelow is a query submitted, please have a look:\n\n${query}`); // Modified body
+        const body = encodeURIComponent(`Hi,\n\nBelow is a query submitted, please have a look:\n\n${query}`);
 
         const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-        // Programmatically create and click an invisible link
         const tempLink = document.createElement('a');
         tempLink.href = mailtoLink;
         tempLink.style.display = 'none';
@@ -35,9 +34,8 @@ export default class GetInTouch extends Component {
 
         const backgroundStyle = {
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'cover', // Adjust as needed (e.g., 'contain', 'auto')
-            backgroundRepeat: 'no-repeat', // Adjust as needed (e.g., 'repeat', 'repeat-x', 'repeat-y')
-            // You can add other background styles here, like backgroundPosition
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
         };
 
         return (

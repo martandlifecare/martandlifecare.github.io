@@ -8,7 +8,6 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { homeScreenBannerDetails } from '../../data/constants';
 import routeConstants from '../../navigation/RouteConstants.json';
 
-// Custom HOC to provide navigate prop
 const withNavigate = (WrappedComponent) => (props) => {
     const navigate = useNavigate();
     return <WrappedComponent {...props} navigate={navigate} />;
@@ -41,7 +40,6 @@ class Banner extends Component {
                                 style={{
                                     backgroundImage: `url('assets/homeScreen/bannerImages/${slide.imageName}')`,
                                     backgroundSize: 'cover',
-                                    // backgroundPosition: 'center',
                                 }}
                                 className='md:p-8 md:h-screen h-30rem md:bg-center'
                             >
@@ -71,4 +69,4 @@ class Banner extends Component {
     }
 }
 
-export default withNavigate(Banner); // Wrap with the custom HOC
+export default withNavigate(Banner);

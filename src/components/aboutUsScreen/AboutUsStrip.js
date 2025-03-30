@@ -8,7 +8,7 @@ export default class AboutUsStrip extends Component {
                 <div class="flex flex-wrap">
                     {aboutUsStripDetails.map((card, index) => (
                         <div
-                            key={index} // Use index as key for simplicity in this example
+                            key={index}
                             className="surface-border about-us-card-deck-gradient flex-grow-1"
                         >
                             <div className="p-3 text-center">

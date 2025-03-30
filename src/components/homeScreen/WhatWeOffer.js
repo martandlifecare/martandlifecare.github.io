@@ -8,9 +8,8 @@ export default class WhatWeOffer extends Component {
 
         const backgroundStyle = {
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'cover', // Adjust as needed (e.g., 'contain', 'auto')
-            backgroundRepeat: 'no-repeat', // Adjust as needed (e.g., 'repeat', 'repeat-x', 'repeat-y')
-            // You can add other background styles here, like backgroundPosition
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
         };
 
         return (
