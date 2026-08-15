@@ -6,8 +6,9 @@ import { Image } from 'primereact/image';
 import { Button } from 'primereact/button';
 import { TieredMenu } from 'primereact/tieredmenu';
 import { ProgressSpinner } from 'primereact/progressspinner';
+import { CATALOG_API_URL } from '../../constants/configuration';
 
-const API_URL = process.env.REACT_APP_CATALOG_API_URL || "YOUR_DEPLOYED_APPS_SCRIPT_WEB_APP_URL";
+const API_URL = CATALOG_API_URL;
 const CACHE_KEY = "products_catalog_cache";
 const CACHE_DURATION_MS = 5 * 60 * 1000; // 5 min TTL
 
