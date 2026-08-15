@@ -3,7 +3,7 @@ name: Build and Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main-code # Triggers automatically when you push source code to main-code
+      - release # Triggers automatically when you push source code to release
 
 permissions:
   contents: write
@@ -31,7 +31,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: main # Deploys the compiled site output to the main branch
+          publish_dir: ./build # The directory containing your built app
+          branch: main # Deploy directly to the main branch
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
