@@ -1,6 +1,3 @@
 /node_modules
 .DS_Store
 package-lock.json
-public/assets/.DS_Store
-public/assets/productsScreen/.DS_Store
-src/components/.DS_Store
