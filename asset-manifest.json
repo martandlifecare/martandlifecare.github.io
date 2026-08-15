@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.46bfe1bb.css",
+    "main.js": "/static/js/main.c6b53291.js",
+    "static/js/453.8c636baf.chunk.js": "/static/js/453.8c636baf.chunk.js",
+    "static/media/vision.jpg": "/static/media/vision.5c015f05b14e66ee7a3f.jpg",
+    "static/media/about-us.jpg": "/static/media/about-us.2bb6817951bb1ff4d8e1.jpg",
+    "static/media/primeicons.svg": "/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/mission.png": "/static/media/mission.e10602f52039d97e35cf.png",
+    "static/media/primeicons.eot": "/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
+    "static/media/what-we-offer-bg.jpg": "/static/media/what-we-offer-bg.cd743083caa46e2293e2.jpg",
+    "static/media/primeicons.woff2": "/static/media/primeicons.024b32cc7bf399b1a847.woff2",
+    "static/media/who-we-are.jpg": "/static/media/who-we-are.13e3d7ac27fa4b1e3713.jpg",
+    "static/media/reach-us.jpg": "/static/media/reach-us.9b3e850e10fbf2688360.jpg",
+    "static/media/footer-bg.png": "/static/media/footer-bg.ae9b9393134172d65cf0.png",
+    "static/media/logo.webp": "/static/media/logo.0f790b4e68dfd82533d8.webp",
+    "index.html": "/index.html",
+    "main.46bfe1bb.css.map": "/static/css/main.46bfe1bb.css.map",
+    "main.c6b53291.js.map": "/static/js/main.c6b53291.js.map",
+    "453.8c636baf.chunk.js.map": "/static/js/453.8c636baf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46bfe1bb.css",
+    "static/js/main.c6b53291.js"
+  ]
+}
