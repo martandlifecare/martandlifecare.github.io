@@ -9,33 +9,41 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 
 const API_URL = process.env.REACT_APP_CATALOG_API_URL || "YOUR_DEPLOYED_APPS_SCRIPT_WEB_APP_URL";
 const CACHE_KEY = "products_catalog_cache";
-const CACHE_DURATION_MS = 60 * 60 * 1000; // 1 hour TTL
+const CACHE_DURATION_MS = 5 * 60 * 1000; // 5 min TTL
 
 /**
- * Helper function to transform Google Drive Image IDs or Links into direct image URLs
+ * Helper function to extract and optimize ImageKit URLs
  */
-const getImageUrl = (item) => {
-    if (item?.imageId) {
-        return `https://lh3.googleusercontent.com/d/${item.imageId}`;
+const getImageUrl = (source, width = 400) => {
+    let url = '';
+
+    if (typeof source === 'string') {
+        url = source;
+    } else if (source?.imageURL) {
+        url = source.imageURL;
+    } else if (source?.image) {
+        url = source.image;
+    } else if (source?.rawUrl) {
+        url = source.rawUrl;
     }
-    if (item?.image) {
-        return item.image;
+
+    if (!url) return '';
+
+    // Apply ImageKit dynamic transformation parameters if not already present
+    if (url.includes('ik.imagekit.io') && !url.includes('tr=')) {
+        const joinChar = url.includes('?') ? '&' : '?';
+        return `${url}${joinChar}tr=w-${width},q-80,f-auto`;
     }
-    if (item?.rawUrl && item.rawUrl.includes('/d/')) {
-        const match = item.rawUrl.match(/\/d\/([^/]+)/);
-        if (match && match[1]) {
-            return `https://lh3.googleusercontent.com/d/${match[1]}`;
-        }
-    }
-    return '';
+
+    return url;
 };
 
 /**
- * Image Component with Direct Google Drive URL Resolution and Fallbacks
+ * Image Component for Product Cards
  */
 const ProductImage = ({ item }) => {
     const [hasError, setHasError] = useState(false);
-    const imageUrl = getImageUrl(item);
+    const imageUrl = getImageUrl(item, 400);
 
     if (hasError || !imageUrl) {
         return (
@@ -62,11 +70,11 @@ const ProductImage = ({ item }) => {
 };
 
 /**
- * Category Header Icon Component with Direct Drive URL Support
+ * Category Header Icon Component
  */
 const CategoryHeaderImage = ({ categoryData, alt, isActive }) => {
     const [hasError, setHasError] = useState(false);
-    const imageUrl = getImageUrl(categoryData);
+    const imageUrl = getImageUrl(categoryData, 80);
 
     if (hasError || !imageUrl) {
         return (
@@ -81,6 +89,7 @@ const CategoryHeaderImage = ({ categoryData, alt, isActive }) => {
             alt={alt}
             src={imageUrl}
             loading="lazy"
+            decoding="async"
             onError={() => setHasError(true)}
             className={`w-2rem h-2rem border-circle object-cover transition-all transition-duration-300 ${
                 isActive ? 'ring-2 ring-emerald-500 scale-105' : 'opacity-70'
@@ -288,7 +297,6 @@ export default class ProductsCatalog extends Component {
                 className="border-1 border-200 border-round-3xl shadow-1 hover:shadow-3 transition-all transition-duration-300 w-full sm:w-20rem surface-0 flex flex-column p-2"
             >
                 <div className="flex flex-column gap-3 h-full">
-                    {/* Pack Size Pill (Green Pill) */}
                     <div className="flex justify-content-end align-items-center px-2 pt-1">
                         <Tag
                             value={item.pack || 'Standard'}
@@ -298,12 +306,10 @@ export default class ProductsCatalog extends Component {
                         />
                     </div>
 
-                    {/* Image Container */}
                     <div className="flex justify-content-center align-items-center relative" style={{ height: '190px' }}>
                         <ProductImage item={item} />
                     </div>
 
-                    {/* Product Details */}
                     <div className="flex flex-column gap-2 text-center mt-1 flex-grow-1 px-2 pb-2">
                         <div className="text-xl text-gray-900 font-extrabold line-height-2" style={{ minHeight: '2.8rem' }}>
                             {item.name}
@@ -312,7 +318,6 @@ export default class ProductsCatalog extends Component {
                             {item.composition}
                         </div>
 
-                        {/* Category Badges (Pill Shape) */}
                         <div className="flex flex-column gap-2 mt-auto pt-3 text-xs">
                             {item.category?.dosage && (
                                 <div className="bg-gray-50 border-1 border-200 border-round-xl px-3 py-2 flex align-items-center justify-content-center gap-2">
@@ -340,7 +345,7 @@ export default class ProductsCatalog extends Component {
             return (
                 <div className="flex flex-column justify-content-center align-items-center gap-4" style={{ minHeight: '65vh' }}>
                     <ProgressSpinner style={{ width: '50px', height: '50px' }} strokeWidth="3" animationDuration=".8s" />
-                    <span className="text-gray-600 font-medium text-lg">Preparing pharmaceutical catalog...</span>
+                    <span className="text-gray-600 font-medium text-lg">Getting products...</span>
                 </div>
             );
         }
@@ -352,7 +357,7 @@ export default class ProductsCatalog extends Component {
                         <div className="w-4rem h-4rem border-circle bg-red-50 flex align-items-center justify-content-center">
                             <i className="pi pi-exclamation-circle text-3xl text-red-500"></i>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 m-0">Catalog Unavailable</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 m-0">Products Catalog Unavailable</h3>
                         <p className="text-gray-500 text-sm m-0 line-height-3">{error}</p>
                         <Button
                             label="Try Again"
@@ -373,7 +378,7 @@ export default class ProductsCatalog extends Component {
                             <i className="pi pi-inbox text-3xl text-emerald-600"></i>
                         </div>
                         <h3 className="text-2xl font-bold text-gray-900 m-0">No Products Found</h3>
-                        <p className="text-gray-500 text-sm m-0">The catalog spreadsheet does not contain any categories yet.</p>
+                        <p className="text-gray-500 text-sm m-0">The catalog does not contain any product categories yet.</p>
                     </div>
                 </div>
             );
@@ -383,7 +388,6 @@ export default class ProductsCatalog extends Component {
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
                 <div className="flex flex-column gap-5 align-items-center">
                     
-                    {/* Header */}
                     <div className="flex flex-column gap-4 text-center align-items-center max-w-30rem">
                         <h1 className="font-black text-4xl md:text-5xl text-gray-900 m-0 tracking-tight">Our Products</h1>
                         <p className="font-normal text-gray-500 text-base md:text-lg m-0 line-height-4">
@@ -391,15 +395,11 @@ export default class ProductsCatalog extends Component {
                         </p>
                     </div>
 
-                    {/* Segmented Category Header Pill */}
                     <div className="w-full flex justify-content-center my-2">
                         {this.renderCategorySelector()}
                     </div>
 
-                    {/* Filter Bar and Content Grid */}
                     <div className="flex flex-column gap-4 w-full align-items-center">
-                        
-                        {/* Active Filter Bar */}
                         <div className="flex flex-wrap gap-2 align-items-center justify-content-center w-full">
                             {this.state.filterCategories.map((category, index) => (
                                 <Chip
@@ -442,7 +442,6 @@ export default class ProductsCatalog extends Component {
                             )}
                         </div>
 
-                        {/* Product Cards Grid */}
                         <div className="flex flex-wrap gap-4 mt-2 mb-8 justify-content-center w-full">
                             {this.renderTabContent()}
                         </div>
